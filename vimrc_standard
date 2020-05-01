@@ -1,0 +1,47 @@
+set nocompatible
+set mouse=a
+
+filetype plugin indent on
+syntax on
+set autoindent
+
+set number
+set ruler
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set backspace=indent,eol,start
+set showcmd
+set cursorline
+set showmatch
+set hlsearch
+
+"Unhighlight search results
+nnoremap <leader><space> :nohlsearch<CR>
+
+"Move up and down lines visually
+inoremap <Up> <C-o>gk
+inoremap <Down> <C-o>gj
+nnoremap <Up> gk
+nnoremap <Down> gj
+
+inoremap ;; <End>;
+inoremap ,, <End>,
+
+command Q q
+command W w
+command Wq wq
+command WQ wq
+
+"Write read-only file
+cmap w!! w !sudo tee /dev/null %
+
+"Highlight pasted text
+nnoremap gV '[v']
+
+map <F7> :tabp<CR>
+map <F8> :tabn<CR>
+inoremap <F7> <C-o>:tabp<CR>
+inoremap <F8> <C-o>:tabn<CR>
