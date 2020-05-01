@@ -27,3 +27,4 @@
 ##config file for nginx is in /etc/nginx
 ##the main config is nginx.conf
 
+##from here, add html page to: /var/www/html folder
